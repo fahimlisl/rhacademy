@@ -81,7 +81,7 @@ export default function About() {
           {[
             {
               name: "Md Fahim",
-              img: "https://images.unsplash.com/photo-1607746882042-944635dfe10e",
+              img: "https://res.cloudinary.com/dkrwq4wvi/image/upload/v1761763940/fahim-alumini.jpg",
               desc: "B.Tech JAMIA MILIA ISLAMIA",
             },
             {
