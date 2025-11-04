@@ -15,7 +15,7 @@ export default function HeroSection() {
           R H ACADEMY
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed animate-fadeInUp delay-200">
-          Welcome to <span className="font-semibold text-white">R H Academy</span> — Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis corrupti, voluptatum reprehenderit accusantium quidem doloremque?
+          Welcome to <span className="font-semibold text-white">R H Academy</span> — we inspire curiosity, creativity, and critical thinking in every student. Our goal is to help learners discover their passions, explore new possibilities, and grow into confident individuals ready to make a difference in the world.
         </p>
         {/* <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition duration-300 hover:scale-105 animate-fadeInUp delay-300">
           Explore Academy

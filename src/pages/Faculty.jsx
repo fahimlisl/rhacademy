@@ -8,17 +8,17 @@ const facultyData = {
     {
       name: "Rejaul Islam Gazi",
       qualification: "MSc,Bed",
-      img: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=400&q=60",
+      img: "https://res.cloudinary.com/dkrwq4wvi/image/upload/v1762200110/RejaulS.jpg",
     },
     {
       name: "Md.Waliur Rahaman",
       qualification: "MSc,Bed",
-      img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=60",
+      img: "https://res.cloudinary.com/dkrwq4wvi/image/upload/v1762200110/OliurPS.jpg",
     },
     {
       name: "Ananta Sarkar ( Guest Teacher)",
       qualification: "MSc,Bed",
-      img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=60",
+      img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=60",
     },
   ],
   Chemistry: [
@@ -44,7 +44,7 @@ const facultyData = {
     {
       name: "Faruk Iftekhar ",
       qualification: "MA",
-      img: "https://images.unsplash.com/photo-1554384645-13eab165c24b?auto=format&fit=crop&w=400&q=60",
+      img: "https://res.cloudinary.com/dkrwq4wvi/image/upload/v1762200110/FarukSEnglish.jpg",
     },
   ],
   Bengali: [
@@ -58,12 +58,12 @@ const facultyData = {
     {
       name: "Mijanur Rahman",
       qualification: "MBBS",
-      img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=400&q=60",
+      img: "https://res.cloudinary.com/dkrwq4wvi/image/upload/v1762200109/biologyS.jpg",
     },
     {
       name: "SAMIM MONDAL",
       qualification: "Bsc,B Pharma",
-      img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=400&q=60",
+      img: "https://res.cloudinary.com/dkrwq4wvi/image/upload/v1762200112/biologyS%28Samim%29.jpg",
     },
   ],
 };
