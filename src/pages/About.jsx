@@ -41,7 +41,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+
       <section className="bg-[#1e293b] text-white py-16 px-6 md:px-20">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Why Choose Us?</h2>
@@ -67,7 +67,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Alumni Success Stories */}
+
       <section className="bg-[#0f172a] text-white py-20 px-6 md:px-20">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Proud Alumni</h2>
@@ -76,13 +76,13 @@ export default function About() {
           </p>
         </div>
 
-        {/* Alumni Grid */}
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {[
             {
               name: "Md Fahim",
               img: "https://res.cloudinary.com/dkrwq4wvi/image/upload/v1761763940/fahim-alumini.jpg",
-              desc: "B.Tech JAMIA MILIA ISLAMIA",
+              desc: "Btech(COMPUTER AND ELECTRICAL ENGINEERING) in Jamia Millia Islamia University , New Delhi",
             },
             {
               name: "Aishwarya Das",
@@ -122,7 +122,7 @@ export default function About() {
             {
               name: "Sk Unus",
               img: "https://res.cloudinary.com/dkrwq4wvi/image/upload/v1762200109/sk%20unus%28makut%20btech%29.jpg",
-              desc: "Makut (B.Tech)",
+              desc: "Btech ( Computer science) in Makut",
             },
           ].map((alumni, idx) => (
             <div
@@ -142,7 +142,7 @@ export default function About() {
           ))}
         </div>
 
-        {/* Call to Action */}
+
         <div className="text-center mt-16">
           <h3 className="text-2xl font-semibold mb-4">Be Our Next Success Story</h3>
           <p className="text-gray-400 mb-6">
@@ -151,7 +151,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Founder Message */}
+
       <section className="bg-[#1e293b] text-white py-16 px-6 md:px-20">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
           <img

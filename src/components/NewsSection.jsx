@@ -38,7 +38,7 @@ const newsList = [
 export default function NewsSection() {
   return (
     <section className="bg-gray-300">
-      {/* Hero Banner */}
+
       <div className="relative w-full h-64 md:h-96 ">
         <img
           src="https://images.unsplash.com/photo-1600047505897-d99c7b49c7f8?auto=format&fit=crop&w=1600&q=60"
@@ -53,7 +53,7 @@ export default function NewsSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col gap-12 ">
-        {/* Featured News */}
+
         <div className="md:flex md:gap-8 shadow-lg rounded-lg overflow-hidden bg-gray-50">
           <img
             src={featuredNews.image}
@@ -70,7 +70,7 @@ export default function NewsSection() {
           </div>
         </div>
 
-        {/* News Grid */}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {newsList.map((news, idx) => (
             <div
@@ -94,7 +94,7 @@ export default function NewsSection() {
           ))}
         </div>
 
-        {/* Optional Load More */}
+
         <div className="flex justify-center mt-6">
           {/* <button className="bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-700 transition">
             Load More News

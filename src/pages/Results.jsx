@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 
-// Sample results data
+
 const resultsData = {
   Board: [
     {
@@ -56,10 +56,10 @@ export default function Results() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navbar */}
+
       <Navbar />
 
-      {/* Hero Banner */}
+
       <div className="relative w-full h-64 md:h-80">
         <img
           src="https://images.unsplash.com/photo-1571091718760-c7e5f4140b70?auto=format&fit=crop&w=1600&q=60"
@@ -73,9 +73,9 @@ export default function Results() {
         </div>
       </div>
 
-      {/* Main Content */}
+
       <main className="flex-1 max-w-7xl mx-auto px-6 py-12 flex flex-col gap-8">
-        {/* Course Tabs */}
+
         <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-6">
           {courses.map((course) => (
             <button
@@ -92,14 +92,14 @@ export default function Results() {
           ))}
         </div>
 
-        {/* Results Grid */}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {resultsData[selectedCourse].map((result, idx) => (
             <div
               key={idx}
               className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105"
             >
-              {/* Thumbnail */}
+
               {result.fileType === "image" ? (
                 <img
                   src={result.fileUrl}
@@ -112,12 +112,12 @@ export default function Results() {
                 </div>
               )}
 
-              {/* Info */}
+
               <div className="p-4 flex flex-col gap-2">
                 <h3 className="font-semibold text-lg">{result.title}</h3>
                 <p className="text-gray-500 text-sm">{result.date}</p>
 
-                {/* Buttons */}
+
                 <div className="flex gap-2 mt-2 flex-wrap">
                   <button
                     onClick={() => openModal(result)}
@@ -138,7 +138,7 @@ export default function Results() {
           ))}
         </div>
 
-        {/* Optional Load More */}
+
         {resultsData[selectedCourse].length > 4 && (
           <div className="flex justify-center mt-6">
             <button className="bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-700 transition">
@@ -148,10 +148,10 @@ export default function Results() {
         )}
       </main>
 
-      {/* Footer */}
+
       <Footer />
 
-      {/* Modal */}
+
       {modalOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"

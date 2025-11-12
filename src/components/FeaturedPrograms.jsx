@@ -24,7 +24,7 @@ export default function FeaturedPrograms() {
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-12">Our Featured Programs</h2>
 
-        {/* Vertical stacking on mobile, grid on md+ */}
+
         <div className="flex flex-col gap-6 md:grid md:grid-cols-3 md:gap-8">
           {programs.map((program, idx) => (
             <div

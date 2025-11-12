@@ -3,7 +3,7 @@ import React from "react";
 export default function HeroSection() {
   return (
     <section className="relative bg-[#1e293b] text-white flex items-center justify-center min-h-[80vh] overflow-hidden rounded-b-1xl shadow-lg">
-      {/* Background Image with Overlay */}
+
       <img
         src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1920&q=80"
         alt="School Campus"

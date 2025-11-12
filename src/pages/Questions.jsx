@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 
-// Sample PYQ data
+
 const pyqData = {
   Boards: [
     {
@@ -28,10 +28,16 @@ const pyqData = {
   ],
   Medical: [
     {
-      title: "Commerce PYQ 2024",
-      date: "June 9, 2024",
+      title: "NEET mock test 2",
+      date: "October 20 , 2025",
       fileType: "pdf",
-      fileUrl: "/questions/commerce_pyq_2024.pdf",
+      fileUrl: "https://drive.google.com/file/d/1LWzB98v77ymnejaF3cRtaBLkQmSzW1lL/view?usp=drivesdk",
+    },
+    {
+      title: "NEET mock test unit 1 , 2 , 3 , 4",
+      date: "October 20 , 2025",
+      fileType: "pdf",
+      fileUrl: "https://drive.google.com/file/d/1e-3lKmA6GuTsNk8QwFmIatcxUVku8lOn/view?usp=drivesdk",
     },
   ],
 };
@@ -40,7 +46,7 @@ export default function Questions() {
   const courses = Object.keys(pyqData);
   const [selectedCourse, setSelectedCourse] = useState(courses[0]);
 
-  // Modal state
+
   const [modalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState({ fileType: "", fileUrl: "", title: "" });
 
@@ -56,10 +62,10 @@ export default function Questions() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navbar */}
+
       <Navbar />
 
-      {/* Hero Banner */}
+
       <div className="relative w-full h-64 md:h-80">
         <img
           src="https://images.unsplash.com/photo-1571091718760-c7e5f4140b70?auto=format&fit=crop&w=1600&q=60"
@@ -73,9 +79,9 @@ export default function Questions() {
         </div>
       </div>
 
-      {/* Main Content */}
+
       <main className="flex-1 max-w-7xl mx-auto px-6 py-12 flex flex-col gap-8">
-        {/* Course Tabs */}
+
         <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-6">
           {courses.map((course) => (
             <button
@@ -92,14 +98,14 @@ export default function Questions() {
           ))}
         </div>
 
-        {/* Questions Grid */}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {pyqData[selectedCourse].map((item, idx) => (
             <div
               key={idx}
               className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105"
             >
-              {/* Thumbnail */}
+
               {item.fileType === "image" ? (
                 <img
                   src={item.fileUrl}
@@ -112,12 +118,12 @@ export default function Questions() {
                 </div>
               )}
 
-              {/* Info */}
+
               <div className="p-4 flex flex-col gap-2">
                 <h3 className="font-semibold text-lg">{item.title}</h3>
                 <p className="text-gray-500 text-sm">{item.date}</p>
 
-                {/* Buttons */}
+
                 <div className="flex gap-2 mt-2 flex-wrap">
                   <button
                     onClick={() => openModal(item)}
@@ -139,10 +145,10 @@ export default function Questions() {
         </div>
       </main>
 
-      {/* Footer */}
+
       <Footer />
 
-      {/* Modal */}
+
       {modalOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"

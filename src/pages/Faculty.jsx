@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 
-// Sample faculty data
+
 const facultyData = {
   Physics: [
     {
@@ -18,7 +18,7 @@ const facultyData = {
     {
       name: "Ananta Sarkar ( Guest Teacher)",
       qualification: "MSc,Bed",
-      img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=60",
+      img: "#",
     },
   ],
   Chemistry: [
@@ -30,13 +30,13 @@ const facultyData = {
   ],
   Mathematics: [
     {
-      name: "Md Arifbilla Mondal",
-      qualification: "MSc,Bed",
-      img: "https://images.unsplash.com/photo-1580894732444-8ecded7900d9?auto=format&fit=crop&w=400&q=60",
+      name: "Kutubuddin Khan",
+      qualification: "MSc",
+      img: "https://res.cloudinary.com/dkrwq4wvi/image/upload/v1762946246/IMG-20251112-WA0017_ghengd.jpg",
     },
     {
-      name: "Kutubuddin Khan",
-      qualification: "Msc",
+      name: "Md Arifbilla Mondal.",
+      qualification: "Msc,Bed",
       img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=60",
     },
   ],
@@ -44,7 +44,7 @@ const facultyData = {
     {
       name: "Faruk Iftekhar ",
       qualification: "MA",
-      img: "https://res.cloudinary.com/dkrwq4wvi/image/upload/v1762200110/FarukSEnglish.jpg",
+      img: "https://res.cloudinary.com/dkrwq4wvi/image/upload/v1762946237/IMG-20251112-WA0018_bq4rmr.jpg",
     },
   ],
   Bengali: [
@@ -73,7 +73,7 @@ function Faculty() {
     <>
       <Navbar />
 
-      {/* Hero Section */}
+
       <div className="relative w-full h-64 md:h-80">
         <img
           src="https://images.unsplash.com/photo-1601933470928-c03d0c99b2a4?auto=format&fit=crop&w=1600&q=60"
@@ -90,7 +90,7 @@ function Faculty() {
         </div>
       </div>
 
-      {/* Faculty Sections */}
+
       <main className="max-w-7xl mx-auto px-6 py-12">
         {Object.entries(facultyData).map(([subject, teachers]) => (
           <section key={subject} className="mb-12">
@@ -115,7 +115,7 @@ function Faculty() {
                     </h3>
                     <p className="text-gray-500 text-sm mt-1">{teacher.qualification}</p>
 
-                    {/* Decorative underline */}
+
                     <div className="w-12 h-[3px] bg-blue-600 mt-3 rounded-full"></div>
                   </div>
                 </div>
