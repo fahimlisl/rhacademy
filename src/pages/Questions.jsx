@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 
-
 const pyqData = {
   Boards: [
     {
@@ -15,7 +14,8 @@ const pyqData = {
       title: "Science PYQ 2023",
       date: "June 12, 2023",
       fileType: "pdf",
-      fileUrl: "https://drive.google.com/file/d/14a2u-UfIWY2jRVEESeYwrrdLhk59zGwH/view?usp=drive_link",
+      fileUrl:
+        "https://drive.google.com/file/d/14a2u-UfIWY2jRVEESeYwrrdLhk59zGwH/view?usp=drive_link",
     },
   ],
   Engineering: [
@@ -31,13 +31,15 @@ const pyqData = {
       title: "NEET mock test 2",
       date: "October 20 , 2025",
       fileType: "pdf",
-      fileUrl: "https://drive.google.com/file/d/1LWzB98v77ymnejaF3cRtaBLkQmSzW1lL/view?usp=drivesdk",
+      fileUrl:
+        "https://drive.google.com/file/d/1LWzB98v77ymnejaF3cRtaBLkQmSzW1lL/view?usp=drivesdk",
     },
     {
       title: "NEET mock test unit 1 , 2 , 3 , 4",
       date: "October 20 , 2025",
       fileType: "pdf",
-      fileUrl: "https://drive.google.com/file/d/1e-3lKmA6GuTsNk8QwFmIatcxUVku8lOn/view?usp=drivesdk",
+      fileUrl:
+        "https://drive.google.com/file/d/1e-3lKmA6GuTsNk8QwFmIatcxUVku8lOn/view?usp=drivesdk",
     },
   ],
 };
@@ -46,26 +48,12 @@ export default function Questions() {
   const courses = Object.keys(pyqData);
   const [selectedCourse, setSelectedCourse] = useState(courses[0]);
 
-
-  const [modalOpen, setModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState({ fileType: "", fileUrl: "", title: "" });
-
-  const openModal = (item) => {
-    setModalContent(item);
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-    setModalContent({ fileType: "", fileUrl: "", title: "" });
-  };
-
   return (
     <div className="flex flex-col min-h-screen">
-
+      {/* Navbar */}
       <Navbar />
 
-
+      {/* Hero Section */}
       <div className="relative w-full h-64 md:h-80">
         <img
           src="https://images.unsplash.com/photo-1571091718760-c7e5f4140b70?auto=format&fit=crop&w=1600&q=60"
@@ -79,9 +67,9 @@ export default function Questions() {
         </div>
       </div>
 
-
+      {/* Main Content */}
       <main className="flex-1 max-w-7xl mx-auto px-6 py-12 flex flex-col gap-8">
-
+        {/* Course Tabs */}
         <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-6">
           {courses.map((course) => (
             <button
@@ -98,14 +86,14 @@ export default function Questions() {
           ))}
         </div>
 
-
+        {/* Questions Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {pyqData[selectedCourse].map((item, idx) => (
             <div
               key={idx}
               className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105"
             >
-
+              {/* Thumbnail */}
               {item.fileType === "image" ? (
                 <img
                   src={item.fileUrl}
@@ -118,19 +106,24 @@ export default function Questions() {
                 </div>
               )}
 
-
+              {/* Info Section */}
               <div className="p-4 flex flex-col gap-2">
                 <h3 className="font-semibold text-lg">{item.title}</h3>
                 <p className="text-gray-500 text-sm">{item.date}</p>
 
-
+                {/* Buttons */}
                 <div className="flex gap-2 mt-2 flex-wrap">
-                  <button
-                    onClick={() => openModal(item)}
+                  {/* Open in New Tab */}
+                  <a
+                    href={item.fileUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1 bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 text-center text-sm transition"
                   >
                     View
-                  </button>
+                  </a>
+
+                  {/* Download */}
                   <a
                     href={item.fileUrl}
                     download
@@ -145,44 +138,8 @@ export default function Questions() {
         </div>
       </main>
 
-
+      {/* Footer */}
       <Footer />
-
-
-      {modalOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
-          onClick={closeModal}
-        >
-          <div
-            className="bg-white rounded-lg overflow-hidden w-11/12 md:w-3/4 lg:w-1/2 max-h-[90vh] p-4 relative"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className="absolute top-2 right-2 text-gray-700 hover:text-gray-900 font-bold text-lg"
-              onClick={closeModal}
-            >
-              ×
-            </button>
-
-            <h2 className="font-bold text-xl mb-4">{modalContent.title}</h2>
-
-            {modalContent.fileType === "image" ? (
-              <img
-                src={modalContent.fileUrl}
-                alt={modalContent.title}
-                className="w-full h-auto object-cover rounded"
-              />
-            ) : (
-              <iframe
-                src={modalContent.fileUrl}
-                className="w-full h-[70vh]"
-                title={modalContent.title}
-              ></iframe>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   );
 }
