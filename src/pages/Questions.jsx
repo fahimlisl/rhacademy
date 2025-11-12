@@ -8,14 +8,14 @@ const pyqData = {
       title: "Science PYQ 2024",
       date: "June 10, 2024",
       fileType: "pdf",
-      fileUrl: "/questions/H_31623320_cvqqqg.pdf",
+      fileUrl: "#",
     },
     {
       title: "Science PYQ 2023",
       date: "June 12, 2023",
       fileType: "pdf",
       fileUrl:
-        "https://drive.google.com/file/d/14a2u-UfIWY2jRVEESeYwrrdLhk59zGwH/view?usp=drive_link",
+        "#",
     },
   ],
   Engineering: [
@@ -23,7 +23,7 @@ const pyqData = {
       title: "Arts PYQ 2024",
       date: "June 11, 2024",
       fileType: "pdf",
-      fileUrl: "/questions/arts_pyq_2024.pdf",
+      fileUrl: "#",
     },
   ],
   Medical: [
